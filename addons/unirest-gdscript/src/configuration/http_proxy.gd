@@ -1,5 +1,4 @@
-extends Resource
-class_name HttpProxy
+class_name HttpProxy extends Resource
 
 @export var host: String = ""
 @export var port: int = -1
@@ -7,12 +6,12 @@ class_name HttpProxy
 @export var password: String = ""
 
 func _init(
-    host: String = "",
-    port: int = -1,
-    username: String = "",
-    password: String = ""
+	host: String = "",
+	port: int = -1,
+	username: String = "",
+	password: String = ""
 ) -> void:
-    self.host = host
-    self.port = port
-    self.username = username
-    self.password = password
+	self.host = host
+	self.port = port
+	self.username = username
+	self.password = password

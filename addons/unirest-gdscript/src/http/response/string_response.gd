@@ -1,18 +1,17 @@
-extends BaseResponse
-class_name StringResponse
+class_name StringResponse extends BaseResponse
 
 var _body: String
 
 func _parse_body(raw_body: PackedByteArray) -> void:
-    _body = raw_body.get_string_from_utf8()
+	_body = raw_body.get_string_from_utf8()
 
 func _init(body: PackedByteArray, headers: PackedStringArray, status: int, code: int) -> void:
-    super(body, headers, status, code)
+	super(body, headers, status, code)
 
 func get_body() -> String:
-    return _body
+	return _body
 
 func _to_string() -> String:
-    return super._to_string().format({
-        body = self._body
-    })
+	return super._to_string().format({
+		body = self._body
+	})
