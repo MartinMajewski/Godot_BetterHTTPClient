@@ -3,3 +3,4 @@
 scn/
 *.import
 project.godot
+.DS_Store
